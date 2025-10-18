@@ -3,6 +3,8 @@
 This console tool allows you to easily store the bash commands with meaningful descriptions for each of them.
 Basically, it generates a markdown document for you which you can view or update on your own.
 
+![hippo](../assets/m.gif)
+
 ## Installation
 
 ```
@@ -45,6 +47,7 @@ read -r -d \"\" sel
 tmux set-buffer -- \"$sel\"
 tmux save-buffer /tmp/m-select
 tmux send-keys -X cancel
+tmux new-window
 tmux send-keys \"cat /tmp/m-select | m i\" C-m
 tmux delete-buffer
 "'
